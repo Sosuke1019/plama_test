@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Hello World\n'
+    return render_template("layout.html")
 
 @app.route('/other')
 def other():
-    return 'Other World\n'
+    return 
 
 if __name__ == "__main__":
     app.run()
