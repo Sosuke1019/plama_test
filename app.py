@@ -25,6 +25,14 @@ def login():
     else:
         return render_template("login.html")
 
+@app.route('/sell')
+def sell():
+    """Sell products"""
+    if request.method == "POST":
+        return redirect("/")
+    else:
+        return render_template("sell.html")
+
 @app.route('/edit')
 def edit():
     """Edit a list of user's products"""
