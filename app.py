@@ -17,6 +17,14 @@ def register():
     else:
         return render_template("register.html")
 
+@app.route('/login')
+def login():
+    """Login user"""
+    if request.method == "POST":
+        return redirect("/")
+    else:
+        return render_template("login.html")
+
 
 if __name__ == "__main__":
     app.run()
