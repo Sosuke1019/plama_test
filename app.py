@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """Show a list of products"""
-    return 
+    return render_template("index.html")
 
 @app.route('/register')
 def register():
